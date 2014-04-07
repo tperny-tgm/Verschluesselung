@@ -5,7 +5,7 @@ public class MonoAlphabeticCipher implements Cipher {
 	public MonoAlphabeticCipher() {
 		this.secretAlphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
 	}
-	public String getsecretAlphabet(){
+	public String getSecretAlphabet(){
 		return secretAlphabet;
 	}
 	protected void setsecretAlphabet(String secretAlphabet){
