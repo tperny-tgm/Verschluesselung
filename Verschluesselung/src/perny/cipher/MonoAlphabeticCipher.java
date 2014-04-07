@@ -8,7 +8,9 @@ public class MonoAlphabeticCipher implements Cipher {
 	public String getSecretAlphabet(){
 		return secretAlphabet;
 	}
-	protected void setsecretAlphabet(String secretAlphabet){
+	protected void setsecretAlphabet(String secretAlphabet) throws IllegalArgumentException{
+		if(secretAlphabet.length() != 30)
+			throw new IllegalArgumentException();
 		this.secretAlphabet = secretAlphabet;
 	}
 	
