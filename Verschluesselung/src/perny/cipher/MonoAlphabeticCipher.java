@@ -27,8 +27,16 @@ public class MonoAlphabeticCipher implements Cipher {
 	}
 	@Override
 	public String decrypt(String text) {
-		// TODO Auto-generated method stub
-		return null;
+		String alphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
+		String dect = "";
+		for(int i=0; i<text.length(); i++){
+			for(int j = 0; j<secretAlphabet.length();j++){
+				if(text.charAt(i)==secretAlphabet.charAt(j)){
+					dect += alphabet.charAt(j);
+				}
+			}
+		}
+		return dect;
 	}
 
 }
